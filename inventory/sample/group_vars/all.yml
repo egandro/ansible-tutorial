@@ -1,0 +1,6 @@
+---
+# this is a meaningful description
+proxmox_lxc_ssh_user: root
+
+# this is a super cool variable
+ansible_user: ansibleuser

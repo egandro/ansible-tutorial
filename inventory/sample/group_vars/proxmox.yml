@@ -1,0 +1,3 @@
+---
+# this is how we can reference variables from somewhere else and add stuff
+ansible_user: '{{ proxmox_lxc_ssh_user }}_this_will_be_appended'

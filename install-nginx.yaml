@@ -1,0 +1,18 @@
+---
+- name: install nginx
+  hosts: testvm
+  become: true
+
+  tasks:
+    # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html
+
+    - name: install nginx
+      ansible.builtin.apt:
+        force_apt_get: true # maybe?
+        name: nginx
+        state: latest
+
+    - name: start nginx
+      ansible.builtin.service:
+          name: nginx
+          state: started

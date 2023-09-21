@@ -1,0 +1,17 @@
+---
+
+- name: installing css file
+  ansible.builtin.copy:
+    src: files/test.css
+    dest: /var/www/html/test.css
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: installing index.html template
+  ansible.builtin.template:
+    src:  templates/index.html.j2
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: '0644'

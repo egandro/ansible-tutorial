@@ -1,0 +1,17 @@
+---
+- name: install nginx
+  hosts: testvm
+  become: true
+
+  tasks:
+    - name: stop nginx
+      service:
+          name: nginx
+          state: stopped
+
+    - name: uninstall nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: absent
+        # autoremove: yes
+        # purge: yes

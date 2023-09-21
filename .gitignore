@@ -1,0 +1,8 @@
+work
+.env/
+*.log
+ansible.cfg
+.python-venv
+__pycache__
+/values.yaml
+secrets.yml

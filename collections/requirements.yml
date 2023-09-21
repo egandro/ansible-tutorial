@@ -1,0 +1,13 @@
+collections:
+  - name: kubernetes.core
+  - name: community.hrobot # for hetzner
+  - name: community.general
+  - name: ansible.posix
+  - name: ansible.utils
+
+roles:
+  - name: my_modules
+    src: https://github.com/egandro/ansible-modules
+    version: main
+    scm: git
+

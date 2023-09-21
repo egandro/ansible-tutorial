@@ -1,0 +1,13 @@
+---
+# https://docs.ansible.com/ansible/latest/collections/ansible/builtin/setup_module.html
+# you might want / need this especially in a role
+# e.g. what is the default eth0 interface name etc.
+- ansible.builtin.setup:
+
+- ansible.builtin.include_tasks: 00_update_os.yml
+
+- ansible.builtin.include_tasks: 01_install_nginx.yml
+
+- ansible.builtin.include_tasks: 03_install_content.yml
+
+- ansible.builtin.include_tasks: 04_start_nginx.yml

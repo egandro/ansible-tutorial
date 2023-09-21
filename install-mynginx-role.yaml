@@ -1,0 +1,9 @@
+---
+- name: install nginx via my-nginx-role
+  hosts: testvm
+  become: true
+
+  roles:
+    - role: my-nginx
+      vars:
+        my_variable: foo

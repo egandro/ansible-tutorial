@@ -1,0 +1,19 @@
+---
+- name: sample book
+  hosts: testvm
+  #become: true
+
+  vars:
+       my_var: "something"
+
+  tasks:
+    - name: hello world
+      ansible.builtin.debug:
+        msg: Hello World {{ my_var }}
+
+    - name: shell script
+      shell: |
+        id > /tmp/log
+        date >> /tmp/log
+      args:
+        executable: /bin/bash

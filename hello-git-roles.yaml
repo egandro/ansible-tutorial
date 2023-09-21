@@ -1,0 +1,6 @@
+---
+- name: sample book
+  hosts: testvm
+
+  roles:
+    - my_modules/hello_world
