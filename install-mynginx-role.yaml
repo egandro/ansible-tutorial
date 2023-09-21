@@ -1,6 +1,6 @@
 ---
 - name: install nginx via my-nginx-role
-  hosts: testvm
+  hosts: proxmoxvm
   become: true
 
   roles:

@@ -1,6 +1,6 @@
 ---
 - name: sample book
-  hosts: testvm
+  hosts: proxmoxvm
   #become: true
 
   vars:

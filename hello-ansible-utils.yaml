@@ -1,6 +1,8 @@
 ---
 - name: sample book
-  hosts: testvm
+  hosts: localhost
+  gather_facts: false # this is much faster as the host is not queried - but some system variables are now empty
+  connection: local # no ssh - just use the host (can be also used in tasks & roles)
 
 # https://docs.ansible.com/ansible/latest/collections/ansible/utils/index.html
 

@@ -1,6 +1,6 @@
 ---
 - name: install nginx
-  hosts: testvm
+  hosts: proxmoxvm
   become: true
 
   tasks:
