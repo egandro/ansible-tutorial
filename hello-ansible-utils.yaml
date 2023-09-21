@@ -3,6 +3,8 @@
   hosts: testvm
 
 # https://docs.ansible.com/ansible/latest/collections/ansible/utils/index.html
+
+# this will also needs "netaddr" in the python requirements.txt file
   tasks:
     - name: Check if given string is a MAC address
       debug:
