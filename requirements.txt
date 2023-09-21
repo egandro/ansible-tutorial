@@ -13,3 +13,7 @@ ansible-core==2.14.3
     #   ansible-lint
 ansible-lint==6.13.1
     # via -r requirements.in
+
+# required for ansible.utils
+netaddr==0.9.0
+

@@ -1,6 +1,6 @@
 # Collections
 
-How to use roles from the community and your own reusable roles for own projects.
+How to use roles from the community for own projects.
 
 ## Community collections
 
@@ -18,30 +18,10 @@ collections:
   - name: community.general
   - name: ansible.posix
   - name: ansible.utils
-
-# roles from your own git
-roles:
-  - name: my_modules
-    src: https://github.com/egandro/ansible-modules
-    version: main
-    scm: git
-
 ```
-
-Install the external collections/roles via:
-
-```bash
-ansible-galaxy install -r ./collections/requirements.yml --force
-```
-
-## Create your own roles via github
-
-Idea from
-
-- <https://blog.ruanbekker.com/blog/2022/04/19/publish-and-use-your-ansible-role-from-git/>
 
 example:
 
 ```bash
-ansible-playbook hello-git-roles.yaml
+ansible-playbook hello-ansible-utils.yaml
 ```
