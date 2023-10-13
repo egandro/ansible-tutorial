@@ -1,6 +1,6 @@
 # Collections
 
-How to use roles from the community for own projects.
+Collections = Roles of the community for a specific topic e.g. Kubernetes.
 
 ## Community collections
 
@@ -20,7 +20,13 @@ collections:
   - name: ansible.utils
 ```
 
-example:
+Install the requirements:
+
+```bash
+ansible-galaxy install -r ./collections/requirements.yml --force
+```
+
+Sample playbook using a galaxy collection
 
 ```bash
 ansible-playbook hello-ansible-utils.yaml

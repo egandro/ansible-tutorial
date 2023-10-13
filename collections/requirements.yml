@@ -4,3 +4,8 @@ collections:
   - name: community.general
   - name: ansible.posix
   - name: ansible.utils
+
+  # sample for user collection (bunch of roles you create to reuse)
+  - name: https://github.com/egandro/ansible-tutorial-collection.git
+    type: git
+    version: main
