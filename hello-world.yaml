@@ -1,7 +1,7 @@
 ---
 - name: sample book
   hosts: proxmoxvm
-  #become: true
+  become: true
 
   vars:
        my_var: "something"

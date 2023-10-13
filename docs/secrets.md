@@ -49,7 +49,7 @@ ansible-playbook sample.yaml --vault-password-file vault.pwd -e @secrets.enc
 
 ```bash
 export ANSIBLE_VAULT_PASSWORD=mysecret
-echo -n "$${ANSIBLE_VAULT_PASSWORD}" | ansible-playbook sample.yaml -e @secrets.enc --vault-password-file=/bin/cat
+echo -n "${ANSIBLE_VAULT_PASSWORD}" | ansible-playbook sample.yaml -e @secrets.enc --vault-password-file=/bin/cat
 ```
 
 

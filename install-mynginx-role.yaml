@@ -6,4 +6,4 @@
   roles:
     - role: my-nginx
       vars:
-        my_variable: foo
+        homepage_name: foo
