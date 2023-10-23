@@ -42,6 +42,7 @@ ansible-vault edit secrets.enc
 
 ```bash
 echo -n "mysecret"  > vault.pwd
+chmod 600 vault.pwd
 ansible-playbook sample.yaml --vault-password-file vault.pwd -e @secrets.enc
 ```
 
@@ -52,6 +53,22 @@ export ANSIBLE_VAULT_PASSWORD=mysecret
 echo -n "${ANSIBLE_VAULT_PASSWORD}" | ansible-playbook sample.yaml -e @secrets.enc --vault-password-file=/bin/cat
 ```
 
+### good resources
 
+- <https://www.cloudbees.com/blog/how-to-keep-your-playbooks-secure-with-ansible-vault>
 
+Convert existing secrets.
+
+```bash
+ansible-vault encrypt vars.yml
+```
+
+Use in CI System.
+
+```bash
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
+echo "${ANSIBLE_VAULT_PASSWORD}" > "${ANSIBLE_VAULT_PASSWORD_FILE}"
+chmod 600 "${ANSIBLE_VAULT_PASSWORD_FILE}"
+ansible-playbook site.yml
+```
 
